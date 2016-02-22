@@ -1,4 +1,4 @@
 export default {
-  LIVE: 'LIVE',
-  DEAD: 'DEAD'
+  DEAD: 0,
+  LIVE: 1
 }
