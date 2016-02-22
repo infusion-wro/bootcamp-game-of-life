@@ -100,15 +100,15 @@ class App extends React.Component {
 
     return (
       <div className="container-fluid" style={{'height': '100%'}}>
-        <div className="col-xs-4">
-          <button className="btn btn-default col-xs-4" onClick={this.random}>Random</button>
-          <button className="btn btn-default col-xs-4" onClick={this.blank}>Blank</button>
-          <button className={classnames('col-xs-4', 'btn', 'btn-default', {
+        <div className="col-xs-2">
+          <button className="btn btn-block btn-default col-xs-12" onClick={this.random}>Random</button>
+          <button className="btn btn-block btn-default col-xs-12" onClick={this.blank}>Blank</button>
+          <button className={classnames('col-xs-12', 'btn', 'btn-block', 'btn-default', {
             'btn-danger': running,
             'btn-success': !running
           })} onClick={this.toggle}>{this.state.intervalId ? 'Stop' : 'Start'}</button>
         </div>
-        <div className="col-xs-8" ref="board">
+        <div className="col-xs-10" ref="board">
           <Board cellSize={this.state.cellSize} board={this.state.board} rows={this.state.rows} cols={this.state.cols} onCellClicked={this.handleCellClicked} />
         </div>
       </div>);
